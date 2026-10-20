@@ -49,10 +49,10 @@ tmp_dir = "tmp"
   clean_on_exit = false
 
 [proxy]
-  app_port = 9090
+  app_port = 5050
   app_start_timeout = 0
   enabled = false
-  proxy_port = 9091
+  proxy_port = 5051
 
 [screen]
   clear_on_rebuild = false
