@@ -6,7 +6,11 @@ BUILD_CMD := $(GO_CMD) build
 BUILD_FLAGS := -o
 BUILD_ENVS := CGO_ENABLED=0
 
-.PHONY: build run clean
+.PHONY: dev build run clean
+
+dev:
+	@echo "\nRunning the dev backend and frontend $(APP_NAME)"
+	go tool task dev
 
 build: clean
 	@echo "\nBuilding $(APP_NAME)"

@@ -10,8 +10,8 @@ tmp_dir = "tmp"
   bin = "./bin/kestrel"
   cmd = "go build -o ./bin/kestrel ."
   delay = 1000
-  entrypoint = ["./bin/kestrel"]
-  exclude_dir = ["assets", "tmp", "vendor", "testdata", "node_modules"]
+  entrypoint = ["./bin/kestrel", "run", "server"]
+  exclude_dir = ["assets", "tmp", "vendor", "testdata", "node_modules", "ui"]
   exclude_file = []
   exclude_regex = ["_test.go"]
   exclude_unchanged = false
@@ -30,7 +30,7 @@ tmp_dir = "tmp"
   rerun = false
   rerun_delay = 500
   send_interrupt = false
-  stop_on_error = false
+  stop_on_error = true
 
 [color]
   app = ""

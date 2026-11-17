@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  dev:
+    desc: Run the Go backend (via Air) and UI dev server in parallel
+    deps:
+      - dev:backend
+      - dev:ui
+
+  dev:backend:
+    desc: Watch and rebuild the Go binary
+    cmds:
+      - go tool air
+
+  dev:ui:
+    desc: Run the frontend development server
+    cmds:
+      - npm --prefix ui run dev
